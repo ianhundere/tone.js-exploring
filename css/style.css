@@ -1,0 +1,6 @@
+#toggle.active span:first-child {
+  display: none;
+}
+#toggle:not(.active) span:last-child {
+  display: none;
+}

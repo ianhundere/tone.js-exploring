@@ -4,8 +4,133 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>exploring tone.js</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body></body>
-    <script type="text/javascript" src="index.js"></script>
+    <body>
+        <div class="container">
+            <section class="section">
+                <div class="field">
+                    <label class="label" for="synth-type">Synth Type</label>
+                    <span class="select is-fullwidth">
+                        <select id="synth-type">
+                            <option value="Synth" selected>Synth</option>
+                            <option value="AMSynth">AMSynth</option>
+                            <option value="FMSynth">FMSynth</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="field">
+                    <label class="label" for="oscillator-type"
+                        >Oscillator Type</label
+                    >
+                    <span class="select is-fullwidth">
+                        <select id="oscillator-type">
+                            <option value="triangle" selected>triangle</option>
+                            <option value="sawtooth">sawtooth</option>
+                            <option value="sine">sine</option>
+                            <option value="square">square</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="field">
+                    <label class="label" for="oscillator-partials"
+                        >Oscillator Partials</label
+                    >
+                    <span class="select is-fullwidth">
+                        <select id="oscillator-partials">
+                            <option value="none" selected>none</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="32">32</option>
+                            <option value="64">64</option>
+                        </select>
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="envelope-attack"
+                        >Attack <span></span
+                    ></label>
+                    <div class="control">
+                        <input
+                            id="envelope-attack"
+                            class="input is-fullwidth"
+                            value="1"
+                            min="0"
+                            max="10"
+                            step="1"
+                            type="range"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="envelope-decay"
+                        >Decay <span></span
+                    ></label>
+                    <div class="control">
+                        <input
+                            id="envelope-decay"
+                            class="input is-fullwidth"
+                            value="1"
+                            min="0"
+                            max="10"
+                            step="1"
+                            type="range"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="envelope-sustain"
+                        >Sustain <span></span
+                    ></label>
+                    <div class="control">
+                        <input
+                            id="envelope-sustain"
+                            class="input is-fullwidth"
+                            value="9"
+                            min="0"
+                            max="10"
+                            step="1"
+                            type="range"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="envelope-release"
+                        >Release <span></span
+                    ></label>
+                    <div class="control">
+                        <input
+                            id="envelope-release"
+                            class="input is-fullwidth"
+                            value="7"
+                            min="0"
+                            max="10"
+                            step="1"
+                            type="range"
+                        />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <button class="button is-success" id="toggle">
+                        <span>Play</span> <span>Pause</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <script src="node_modules/tone/build/Tone.js"></script>
+        <script src="js/index.js"></script>
+    </body>
 </html>
